@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_icon_section">
+    <sys_sg_icon_section action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applets>c3d9be042f630110d5e8dc1a2799b66c</applets>
+        <data_item/>
+        <display_feed_count>false</display_feed_count>
+        <hide_header>false</hide_header>
+        <hide_section_if_empty>false</hide_section_if_empty>
+        <is_hidden_preference_name/>
+        <orientation>horizontal</orientation>
+        <required_roles>x_563603_cafe_mana.cafe_owner,x_563603_cafe_mana.cafe_customer,x_563603_cafe_mana.cafe_manager</required_roles>
+        <sys_class_name>sys_sg_icon_section</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-14 08:54:52</sys_created_on>
+        <sys_id>cfd9be042f630110d5e8dc1a2799b67a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Orders</sys_name>
+        <sys_package display_value="Cafe management" source="x_563603_cafe_mana">5a2876c02f630110d5e8dc1a2799b6fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cafe management">5a2876c02f630110d5e8dc1a2799b6fa</sys_scope>
+        <sys_update_name>sys_sg_icon_section_cfd9be042f630110d5e8dc1a2799b67a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-14 08:54:52</sys_updated_on>
+        <table/>
+        <title>Orders</title>
+        <visible_condition/>
+    </sys_sg_icon_section>
+</record_update>
