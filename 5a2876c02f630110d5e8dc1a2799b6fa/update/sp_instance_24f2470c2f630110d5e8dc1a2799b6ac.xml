@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">f6e2870c2f630110d5e8dc1a2799b62a</sp_column>
+        <sp_widget display_value="Menu Card">26220f882f630110d5e8dc1a2799b61b</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-14 09:34:34</sys_created_on>
+        <sys_id>24f2470c2f630110d5e8dc1a2799b6ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Cafe management" source="x_563603_cafe_mana">5a2876c02f630110d5e8dc1a2799b6fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cafe management">5a2876c02f630110d5e8dc1a2799b6fa</sys_scope>
+        <sys_update_name>sp_instance_24f2470c2f630110d5e8dc1a2799b6ac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-14 09:34:34</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=24f2470c2f630110d5e8dc1a2799b6ac"/>
+</record_update>
