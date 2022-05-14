@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($document,$scope,$rootScope,$timeout,$window) {
+  /* widget controller */
+  var c = this;
+	c.data.order = [];
+	
+	$scope.activeMenu = 'Pizza';
+	
+	c.onClick = function (category) {
+		
+				$scope.activeMenu = category;
+				$rootScope.$broadcast('show', category);
+        //$window.location.href = "/sp?variable=pizza";
+	}
+	
+	c.totalOrder = function (category) {
+		
+		var order = 0;
+		
+		for(var i=0;i<c.data.order.length;i++){
+			order+=c.data.order[0].price*c.data.order[0].quan;
+		}
+		
+		return order
+	}
+	
+	$scope.confirmOrder = function() {
+		
+		alert('Thank You for submitting your order');
+	}
+	
+	$rootScope.$on('currentOrder', function(event,qData) {
+		
+		var quantity = qData.quan;
+		c.data.order_count = quantity;
+		var item = qData.name;
+		
+		if(quantity>0){
+			
+			var flag=0;
+			
+			c.data.order.filter(function(og_item){ 
+				if(og_item.name == item){
+					og_item.quan = quantity;
+					flag=1;
+				}	
+				return; 
+			});
+				
+			if(flag==0 && item!=''){
+				c.data.order.push(qData);
+			}
+		}
+	});
+	
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.navbar {
+  background-color: #f5f0e1;
+}
+
+.icon-bar {
+	background-color: black;
+}
+
+.navbar-brand {
+	color: black;
+}
+
+.navbar-nav li a {
+  color: black;
+}
+
+.order-box {
+  border-style: groove;
+  border: solid;
+  padding: 20px;
+}
+
+.table-bordered {
+	outline: 12px solid #a9c0a6;
+}
+
+.orderConfirmation {
+	color: green;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>menu_card</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Menu Card</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-14 09:31:08</sys_created_on>
+        <sys_id>26220f882f630110d5e8dc1a2799b61b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Menu Card</sys_name>
+        <sys_package display_value="Cafe management" source="x_563603_cafe_mana">5a2876c02f630110d5e8dc1a2799b6fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cafe management">5a2876c02f630110d5e8dc1a2799b6fa</sys_scope>
+        <sys_update_name>sp_widget_26220f882f630110d5e8dc1a2799b61b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-14 09:32:14</sys_updated_on>
+        <template><![CDATA[<nav class="navbar sticky-top">
+  <div class="container sticky-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Heading</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ng-class="{active : activeMenu === 'Home'}"><a ng-click="c.onClick('Home')">Home</a></li>
+        <li class="active dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ng-class="{active : activeMenu === 'Pizza'}"><a ng-click="c.onClick('Pizza')">Pizza</a></li>
+            <li ng-class="{active : activeMenu === 'Sandwich'}"><a ng-click="c.onClick('Sandwich')">Sandwich</a></li>
+            <li ng-class="{active : activeMenu === 'Burger'}"><a ng-click="c.onClick('Burger')">Burger</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="order order-box" ng-if="c.data.order_count>0">
+
+    <h4 class="orderConfirmation">
+      Confirm Your Order :<br><br>
+     </h4> 
+    <table class="table table-bordered">
+    <thead >
+        <th class="warning">Menu Item</th>
+        <th class="warning">Quantity</th>
+      	<th class="warning">Price</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat='x in c.data.order'>
+        <td class="warning">{{x.name}}</td>
+        <td class="warning">{{x.quan}}</td>
+        <td class="warning">{{x.price*x.quan}}</td>
+      </tr>
+      <tr>
+        <td class="warning"></td>
+        <th class="warning">Total :</th>
+        <th class="warning">{{c.totalOrder()}}</th>
+      </tr>
+      </tbody>
+  </table>
+  <br>
+  <span class="glyphicon glyphicon-thumbs-up" data-toggle="tooltip" style="cursor:pointer;font-size:40px;color: green;" data-title="Place My Order" ng-click="confirmOrder()"></span>
+
+
+ 
+</div>
+<div class="scroll-container" >
+  <widget id="test_123"></widget>
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>
