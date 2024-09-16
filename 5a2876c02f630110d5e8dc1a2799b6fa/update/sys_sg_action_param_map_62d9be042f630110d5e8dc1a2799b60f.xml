@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_action_param_map">
+    <sys_sg_action_param_map action="INSERT_OR_UPDATE">
+        <button display_value="New Button (Menu)">26d9be042f630110d5e8dc1a2799b60b</button>
+        <item_parameter display_value="Menu u_type">a6d9be042f630110d5e8dc1a2799b60a</item_parameter>
+        <sys_class_name>sys_sg_action_param_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-14 08:54:50</sys_created_on>
+        <sys_id>62d9be042f630110d5e8dc1a2799b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>a6d9be042f630110d5e8dc1a2799b60a</sys_name>
+        <sys_package display_value="Cafe management" source="x_563603_cafe_mana">5a2876c02f630110d5e8dc1a2799b6fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cafe management">5a2876c02f630110d5e8dc1a2799b6fa</sys_scope>
+        <sys_update_name>sys_sg_action_param_map_62d9be042f630110d5e8dc1a2799b60f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-14 08:54:50</sys_updated_on>
+        <ui_parameter display_value="Type">6ad9be042f630110d5e8dc1a2799b60d</ui_parameter>
+    </sys_sg_action_param_map>
+</record_update>

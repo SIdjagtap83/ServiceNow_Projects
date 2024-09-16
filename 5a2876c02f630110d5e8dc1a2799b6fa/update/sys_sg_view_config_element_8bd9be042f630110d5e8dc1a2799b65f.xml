@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_view_config_element">
+    <sys_sg_view_config_element action="INSERT_OR_UPDATE">
+        <name>order_amount-FieldLabel</name>
+        <sys_class_name>sys_sg_view_config_element</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-14 08:54:51</sys_created_on>
+        <sys_id>8bd9be042f630110d5e8dc1a2799b65f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>order_amount-FieldLabel</sys_name>
+        <sys_package display_value="Cafe management" source="x_563603_cafe_mana">5a2876c02f630110d5e8dc1a2799b6fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cafe management">5a2876c02f630110d5e8dc1a2799b6fa</sys_scope>
+        <sys_update_name>sys_sg_view_config_element_8bd9be042f630110d5e8dc1a2799b65f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-14 08:54:51</sys_updated_on>
+        <view_config display_value="Orders Detail Screen View Config">4fd9be042f630110d5e8dc1a2799b655</view_config>
+        <view_template_slot display_value="text_04">5b4449fc41e35010f877183fc9b8be74</view_template_slot>
+    </sys_sg_view_config_element>
+</record_update>

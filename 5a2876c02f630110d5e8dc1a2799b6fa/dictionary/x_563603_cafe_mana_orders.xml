@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Orders" max_length="40" name="x_563603_cafe_mana_orders" type="collection">
+        <element attributes="encode_utf8=false" label="Customer" max_length="32" name="customer" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Order Amount" max_length="40" name="order_amount" type="float"/>
+        <element label="Order Items" max_length="4000" name="order_items" reference="u_menu" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Rating" max_length="40" name="rating" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Reviews" max_length="40" name="reviews" type="string"/>
+        <index name="index">
+            <element name="customer"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <role display_value="x_563603_cafe_mana.cafe_manager" name="x_563603_cafe_mana.cafe_manager">5348bac02f630110d5e8dc1a2799b6e4</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-14 08:48:03</sys_created_on>
+        <sys_id>9b48bac02f630110d5e8dc1a2799b6e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5348bac02f630110d5e8dc1a2799b6e4</sys_name>
+        <sys_package display_value="Cafe management" source="x_563603_cafe_mana">5a2876c02f630110d5e8dc1a2799b6fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cafe management">5a2876c02f630110d5e8dc1a2799b6fa</sys_scope>
+        <sys_update_name>sys_embedded_help_role_9b48bac02f630110d5e8dc1a2799b6e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-14 08:48:03</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope,$rootScope,$timeout,$window) {
+  /* widget controller */
+  var c = this;
+	
+	c.data.order = [''];
+	
+	$rootScope.$on('show', function(event,qData) {
+		c.data.query = qData;
+		c.server.update();
+	});
+	
+	
+	$scope.addItem = function(item,quantity,price) {
+		
+		var obj = {
+					name: item,
+					quan: quantity,
+					price: price
+				};
+		$rootScope.$broadcast('currentOrder', obj);
+	
+	}
+	
+	
+	
+	
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@media (min-width: 200px) and (max-width: 767.98px) { 
+  
+.row {
+	//background-color: #ecc19c;
+  background-color: #f5f0e1;
+  padding: 10px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: auto;
+  background-color: #a9c0a6;
+  border-radius: 5px;
+}
+
+.card {
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background-color: #f5f0e1;
+  //background-color: #e7e8d1;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+  border-radius: 5px 5px 0 0;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  
+}
+
+.card-body {
+  
+}
+  
+.medium-btn {
+  width: 100px;
+  height: 30px;
+  
+}
+  
+  
+  .quantity {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+  
+.glyphicon-plus {
+   color: #5cb85c;
+}
+  
+.glyphicon-minus {
+   color: red;
+}
+  
+input[type="number"] {
+  -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+    
+  
+}
+
+@media (min-width: 992px) { 
+
+  .row {
+	background-color: #000fff;
+  padding: 10px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  height: auto;
+	background-color: #fff000;
+  border-radius: 5px;
+}
+  
+.card {
+  padding: 10px;
+  justify-content: space-around;
+  flex: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 100%;
+  height: 250px;
+  background-color: #eff5f3;
+}
+  
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-body {
+  
+}
+  
+.small-btn {
+  width: 40px;
+  height: 25px;
+}
+  
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>menu_card_item</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Menu Card Item</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+ 
+	data.menu = [];
+	
+	var category = 'pizza';
+	
+	if(input){
+		category = input.query;
+	}
+		var menu_items = new GlideRecord('u_menu');
+		menu_items.addEncodedQuery('u_type='+category);
+	menu_items.query();
+	
+	while(menu_items.next()){
+		var obj = {};
+		obj.name = menu_items.u_name+"";
+		obj.price = menu_items.u_price+"";
+		obj.type = menu_items.u_type+"";
+		obj.image = menu_items.u_image+"";
+		
+		data.menu.push(obj);
+		
+	}
+	
+	console.log(data.menu[0].name+" "+data.menu[0].image+" ");
+	
+	/*
+	var variable = $sp.getParameter('variable');
+	data.query = variable;
+	console.log(data.query);
+	*/
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-14 09:29:07</sys_created_on>
+        <sys_id>74b147c82f630110d5e8dc1a2799b6d7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Menu Card Item</sys_name>
+        <sys_package display_value="Cafe management" source="x_563603_cafe_mana">5a2876c02f630110d5e8dc1a2799b6fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cafe management">5a2876c02f630110d5e8dc1a2799b6fa</sys_scope>
+        <sys_update_name>sp_widget_74b147c82f630110d5e8dc1a2799b6d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-14 09:30:12</sys_updated_on>
+        <template><![CDATA[<div class="row">
+  <div class="col-lg-4 col-xs-12">
+  <div class="container-fluid ">
+    <div class="card" ng-repeat='x in c.data.menu'>
+        <img class="card-img-top" ng-src="{{::x.image + '.iix'}}" alt="Card image cap">
+        <div class="card-body">
+        	<h4 class="card-title"><b>{{x.name}}</b></h4>
+          <h6 ng-init="count=1">
+            <span class="glyphicon glyphicon-minus" ng-click="count = count - 1"></span>
+            <input ng-if="count>=0" ng-value="count" class="quantity" type="number" id="quantity" name="quantity" min="0" max="5"  >
+            <span class="glyphicon glyphicon-plus" ng-click="count = count + 1" ></span>
+          </h6>
+          <p class="card-text"><span>₹ </span>{{x.price*count}}<span><input type="button" class="btn btn-success small-btn medium-btn" value="Add" style="float: right;" ng-click="addItem(x.name, count, x.price)"></span></p>
+        </div>
+      </div>	
+		</div>
+  </div> 
+</div>
+
+
+<div>
+        
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

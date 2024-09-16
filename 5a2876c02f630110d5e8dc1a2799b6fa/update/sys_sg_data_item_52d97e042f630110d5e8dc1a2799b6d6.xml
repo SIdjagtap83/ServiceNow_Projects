@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_data_item">
+    <sys_sg_data_item action="INSERT_OR_UPDATE">
+        <condition_type>declarative</condition_type>
+        <description/>
+        <group_by/>
+        <instance_relative_url_qc/>
+        <name>Cafe management Menu</name>
+        <query_condition/>
+        <query_condition_script/>
+        <sys_class_name>sys_sg_data_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-14 08:54:49</sys_created_on>
+        <sys_id>52d97e042f630110d5e8dc1a2799b6d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cafe management Menu</sys_name>
+        <sys_package display_value="Cafe management" source="x_563603_cafe_mana">5a2876c02f630110d5e8dc1a2799b6fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cafe management">5a2876c02f630110d5e8dc1a2799b6fa</sys_scope>
+        <sys_update_name>sys_sg_data_item_52d97e042f630110d5e8dc1a2799b6d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-14 08:54:49</sys_updated_on>
+        <table>u_menu</table>
+    </sys_sg_data_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=52d97e042f630110d5e8dc1a2799b6d6"/>
+</record_update>
